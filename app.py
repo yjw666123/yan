@@ -13,7 +13,7 @@ def main():
   r=request.form.get("r")
   return(render_template("main.html",r=r))
 
-@app.route("/imagegpt",methods=["GET","POST"])
+@app.route("/image_gpt",methods=["GET","POST"])
 def image_gpt():
   return(render_template("image_gpt.html"))
 
