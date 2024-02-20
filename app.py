@@ -15,5 +15,9 @@ def main():
 def image_gpt():
   return(render_template("imagegpt.html"))
 
+@app.route("/end",methods=["GET","POST"])
+def end():
+  return(render_template("end.html"))
+
   if __name__=="__main__":
          app.run()
