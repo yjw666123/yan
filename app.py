@@ -27,15 +27,15 @@ def image_gpt():
 
 @app.route("/image_result",methods=["GET","POST"])
 def image_result():
-     q=request.form.get("q")//前端——后端
-        r//后端 = replicate.run(
+     q=request.form.get("q")
+        r= replicate.run(
     "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
     input={
-        "prompt": q,//后端
+        "prompt": q,
          }
     )
     time.sleep(10)   
-    return(render_template("image_gpt.html",r//前端=r[0]//后端))
+    return(render_template("image_gpt.html",r=r[0]))
 
 @app.route("/end",methods=["GET","POST"])
 def end():
