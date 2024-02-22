@@ -46,6 +46,12 @@ def text_result():
     time.sleep(5)
     return(render_template("text_result.html",r=r.choices[0].message.content))
 
+@app.route("/ntu",methods=["GET","POST"])
+def ntu():
+    return(render_template("ntu.html"))
+
+
+
 @app.route("/image_gpt",methods=["GET","POST"])
 def image_gpt():
     return(render_template("image_gpt.html"))
@@ -68,6 +74,7 @@ def end():
     global first_time
     first_time = 1
     return(render_template("end.html"))
+
 
 if __name__ == "__main__":
     app.run()
